@@ -14,7 +14,12 @@ export class ProductOverviewComponent implements OnInit {
   constructor(private productService: ProductService) { }
 
   ngOnInit() {
-    this.products = this.productService.getProducts();
+    this.productService.getProducts()
+      .catch(err => {
+        console.error(err);
+        return [];
+      })
+      .subscribe(data => this.products = data);
   }
 
 }

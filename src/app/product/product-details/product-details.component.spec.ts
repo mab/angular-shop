@@ -5,14 +5,18 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../product-service/product.service';
 import { Product } from '../product.types';
+import {Observable} from 'rxjs/Observable';
+
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/catch';
 
 describe('ProductDetailsComponent', () => {
   let component: ProductDetailsComponent;
   let fixture: ComponentFixture<ProductDetailsComponent>;
 
   class ProductServiceMock {
-    getProductById(id: string): Product {
-      return {} as Product;
+    getProductById(id: string): Observable<Product> {
+      return Observable.of({} as Product);
     }
   }
 

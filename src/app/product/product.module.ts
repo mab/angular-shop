@@ -6,12 +6,17 @@ import { ProductListItemComponent } from './product-list-item/product-list-item.
 import { ProductService } from './product-service/product.service';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductRoutingModule } from './product-routing.module';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   imports: [
     CommonModule,
     MdCardModule,
     ProductRoutingModule,
+    HttpModule
+  ],
+  exports: [
+    ProductOverviewComponent,
   ],
   providers: [
     ProductService,

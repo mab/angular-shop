@@ -5,14 +5,18 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ProductService } from '../product-service/product.service';
 import { Product } from '../product.types';
 import { RouterTestingModule } from '@angular/router/testing';
+import {Observable} from 'rxjs/Observable';
+
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/catch';
 
 describe('ProductOverviewComponent', () => {
   let component: ProductOverviewComponent;
   let fixture: ComponentFixture<ProductOverviewComponent>;
 
   class ProductServiceMock {
-    getProducts(): Product[] {
-      return [];
+    getProducts(): Observable<Product[]> {
+      return Observable.of([]);
     }
   }
 
