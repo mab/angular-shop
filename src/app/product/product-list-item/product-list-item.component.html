@@ -1,3 +1,7 @@
 <md-card>
-  <md-card-title>{{product?.name}}</md-card-title>
+  <md-card-header>
+    <div md-card-avatar [style.background-image]="'url('+product?.image+')'"></div>
+    <md-card-title>{{product?.name}}</md-card-title>
+    <md-card-subtitle>{{product?.price}}</md-card-subtitle>
+  </md-card-header>
 </md-card>
