@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ProductModule } from './product/product.module';
+import { MdToolbarModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -10,6 +11,7 @@ import { ProductModule } from './product/product.module';
   ],
   imports: [
     BrowserModule,
+    MdToolbarModule,
     ProductModule,
   ],
   providers: [],

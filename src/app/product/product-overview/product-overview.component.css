@@ -1,0 +1,9 @@
+:host {
+  margin: 1rem;
+}
+
+md-card {
+  width: 20rem;
+  margin: 1rem;
+  min-width: 20rem;
+}
