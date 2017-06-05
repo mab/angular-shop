@@ -4,14 +4,13 @@ import { ProductOverviewComponent } from './product-overview/product-overview.co
 import { MdCardModule } from '@angular/material';
 import { ProductListItemComponent } from './product-list-item/product-list-item.component';
 import { ProductService } from './product-service/product.service';
+import { ProductRoutingModule } from './product-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     MdCardModule,
-  ],
-  exports: [
-    ProductOverviewComponent,
+    ProductRoutingModule,
   ],
   providers: [
     ProductService,
