@@ -3,3 +3,7 @@
   flex-wrap: wrap;
   margin: 1rem;
 }
+
+a {
+  text-decoration: none;
+}

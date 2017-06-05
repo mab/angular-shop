@@ -4,6 +4,7 @@ import { ProductOverviewComponent } from './product-overview.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ProductService } from '../product-service/product.service';
 import { Product } from '../product.types';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('ProductOverviewComponent', () => {
   let component: ProductOverviewComponent;
@@ -20,9 +21,9 @@ describe('ProductOverviewComponent', () => {
       declarations: [ ProductOverviewComponent ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
       providers: [{
-        provide: ProductService,
-        useClass: ProductServiceMock
-      }]
+        provide: ProductService, useClass: ProductServiceMock,
+      }],
+      imports: [RouterTestingModule]
     })
     .compileComponents();
   }));

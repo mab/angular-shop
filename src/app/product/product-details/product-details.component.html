@@ -1,0 +1,8 @@
+<md-card *ngIf="product">
+  <md-card-title>{{product.name}}</md-card-title>
+  <img *ngIf="product.image" md-card-image src="{{product.image}}">
+  <md-card-content>
+    <p>{{product.description}}</p>
+    <p>Price: {{product.price}}</p>
+  </md-card-content>
+</md-card>

@@ -4,6 +4,7 @@ import { ProductOverviewComponent } from './product-overview/product-overview.co
 import { MdCardModule } from '@angular/material';
 import { ProductListItemComponent } from './product-list-item/product-list-item.component';
 import { ProductService } from './product-service/product.service';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductRoutingModule } from './product-routing.module';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ProductRoutingModule } from './product-routing.module';
   declarations: [
     ProductOverviewComponent,
     ProductListItemComponent,
+    ProductDetailsComponent,
   ]
 })
 export class ProductModule { }
