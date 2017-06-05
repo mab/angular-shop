@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../product.types';
 
 @Component({
   selector: 'app-product-overview',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductOverviewComponent implements OnInit {
 
-  products = ['1984', 'Das Leben des Brian', 'Pulp Fiction'];
+  products: Product[]  = [{name: '1984'}, {name: 'Das Leben des Brian'}, {name: 'Pulp Fiction'}];
 
   constructor() { }
 
